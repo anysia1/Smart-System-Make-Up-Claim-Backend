@@ -6,7 +6,7 @@ const sendEmail = require('../utils/email/sendEmail');
 const multer= require('multer');
 const SENDEMAIL = require('../utils/SendEmail');
 
-// Establishing a multer storage
+// Establishing a multer storage demo class
 const multerStorage = multer.diskStorage({
     destination: (req, file, callback) => { callback(null, './uploads') },
     filename: (req, file, callback) => { callback(null, `${file.fieldname}-${file.originalname}`) }
